@@ -17,7 +17,11 @@ public class BinaryCommand {
 		}
 	}
 
-	
+	public BinaryCommand(String command, byte[]... args) {
+		super();
+		this.command = TextEncoder.encode(command);
+		this.args = args;
+	}
 
 	public BinaryCommand(byte[] command, byte[]... args) {
 		super();
